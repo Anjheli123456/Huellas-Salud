@@ -1,0 +1,259 @@
+/* ==========================================================================
+   ESTILOS GENERALES (Base Oscura para Resaltar el Neón)
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    background-color: #120205; /* Fondo negro-vino ultra oscuro */
+    color: #fff0f2;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   MENÚ DE NAVEGACIÓN (Estilo Barra Neón Flotante)
+   ========================================================================== */
+header {
+    background: rgba(34, 4, 10, 0.8); /* Efecto cristal translúcido */
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff0055; /* Línea neón brillante */
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+}
+
+.nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.web-logo {
+    height: 50px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.web-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 40px !important;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff3377;
+    text-shadow: 0 0 8px #ff0055, 0 0 15px #ff0055;
+}
+
+/* ==========================================================================
+   BLOQUES DE CONTENIDO & GALERÍA DE PERRITOS
+   ========================================================================== */
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero, .destacado, .galeria-seccion {
+    background-color: #1e0509; /* Fondo de la tarjeta vino suave */
+    padding: 50px 40px;
+    border-radius: 35px; /* Súper redondeado (Cute) */
+    border: 2px solid rgba(255, 0, 85, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    transition: transform 0.3s ease;
+}
+
+.hero:hover, .destacado:hover, .galeria-seccion:hover {
+    transform: translateY(-5px);
+    border-color: #ff0055;
+    box-shadow: 0 15px 35px rgba(255, 0, 85, 0.2);
+}
+
+/* Rejilla para alinear las fotos de los perritos */
+.galeria-perritos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.tarjeta-perrito {
+    width: 230px;
+    height: 230px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #ff0055;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+}
+
+.tarjeta-perrito img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-perrito:hover img {
+    transform: scale(1.1); /* Efecto zoom */
+}
+
+/* Títulos y textos con Brillo Neón */
+h1, h2 {
+    color: #ff1a6c;
+    font-size: 36px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 0, 85, 0.6);
+}
+
+h2 { font-size: 28px; }
+p { font-size: 18px; color: #e6cbd0; margin-bottom: 30px; }
+
+/* ==========================================================================
+   COMPONENTES CUTE (Botones y Listas)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    background: #ff0055;
+    color: #ffffff;
+    padding: 14px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px #ff0055;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff3377;
+    box-shadow: 0 0 25px #ff0055;
+    transform: scale(1.05);
+}
+
+main ul {
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+main ul li {
+    font-size: 19px;
+    color: #ffffff;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+main ul li::before {
+    content: "🐾";
+    text-shadow: 0 0 8px #ff0055;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (Footer)
+   ========================================================================== */
+footer {
+    background-color: #0a0102;
+    color: #a68c91;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 80px;
+    border-top: 2px solid rgba(255, 0, 85, 0.2);
+}
+/* ==========================================================================
+   REDES SOCIALES EN EL FOOTER (Estilo Neón)
+   ========================================================================== */
+/* Contenedor de los enlaces de tus redes */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.social-link {
+    color: #fff0f2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 0, 85, 0.2);
+    background: rgba(30, 5, 9, 0.6);
+    transition: all 0.3s ease;
+}
+
+/* Efecto de luz neón individual al pasar el mouse por cada red */
+.social-link.fb:hover {
+    color: #3b5998; /* Color azul Facebook */
+    border-color: #3b5998;
+    box-shadow: 0 0 12px #3b5998;
+    transform: translateY(-3px);
+}
+
+.social-link.ig:hover {
+    color: #ff3377; /* Color rosa/Instagram */
+    border-color: #ff3377;
+    box-shadow: 0 0 12px #ff3377;
+    transform: translateY(-3px);
+}
+
+.social-link.ln:hover {
+    color: #0077b5; /* Color azul profesional LinkedIn */
+    border-color: #0077b5;
+    box-shadow: 0 0 12px #0077b5;
+    transform: translateY(-3px);
+}
+/* Une el logo de perrito con el nombre de tu empresa en línea */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Separa el logo del texto */
+    text-decoration: none;
+}
+
+/* Estilo para el título pequeño y blanco en el menú */
+.logo-title {
+    color: #ffffff;
+    font-size: 20px;       /* Letra más pequeña que el h1 de la portada */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* Un brillo blanco muy sutil */
+    transition: color 0.3s ease;
+}
+
+/* El nombre también reacciona de forma linda cuando pasas el mouse */
+.logo-link:hover .logo-title {
+    color: #ff3377;
+    text-shadow: 0 0 8px #ff0055;
+}
